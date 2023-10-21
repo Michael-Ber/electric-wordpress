@@ -8,15 +8,13 @@
     get_header();
 ?>
 
-<section class="contacts" id="contacts">
+<section class="contacts" id="contacts" style="background:url('<?php the_post_thumbnail_url();?>') center center/cover no-repeat">
     <div class="container">
         <h2 class="contacts__title section-title"><?php the_field('contacts_title');?></h2>
         <div class="contacts__wrapper">
             <div class="contacts__left">
                 <div class="contacts__list-wrapper">
                     <span class="contacts__list-name"><?php the_field('contacts_links');?></span>
-                    
-                    
                     
                     <ul class="contacts__list">
 
@@ -47,25 +45,6 @@
                                 wp_reset_postdata(); // сброс
                             
                             ?>
-
-                        <!-- <li class="contacts__item">
-                            <a href="<?php the_field('whatsapp', 2);?>" class="contacts__link"
-                                aria-label="ссылка для перехода в чат whatsapp">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/icons/whatsapp.svg" alt="whatsapp">
-                            </a>
-                        </li>
-                        <li class="contacts__item">
-                            <a href="<?php the_field('viber');?>" class="contacts__link"
-                                aria-label="ссылка для перехода к чату в viber">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/icons/viber.svg" alt="viber">
-                            </a>
-                        </li>
-                        <li class="contacts__item">
-                            <a href="<?php the_field('telegram');?>" class="contacts__link"
-                                aria-label="ссылка для перехода к чату в telegram">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/icons/telegram.svg" alt="telegram">
-                            </a>
-                        </li> -->
                     </ul>
                 </div>
                 <p class="contacts__mail">

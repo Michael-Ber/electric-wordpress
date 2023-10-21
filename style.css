@@ -486,7 +486,7 @@ Theme Name: Electric
     padding: 100px 10px;
 }
 
-.about::before {
+/* .about::before {
     content: "";
     display: block;
     position: absolute;
@@ -496,7 +496,7 @@ Theme Name: Electric
     bottom: 0;
     background: url(assets/img/bg-2.jpg) center center/cover no-repeat;
     z-index: -1
-}
+} */
 
 .about::after {
     content: "";
@@ -564,16 +564,31 @@ Theme Name: Electric
 }
 
 .contacts {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 100px 10px;
-    background-color: #f8f8f8
+    background-color: #f8f8f8;
+    z-index: 1;
+}
+
+.contacts::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: -1
 }
 
 .contacts__title {
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    color: #fff;
 }
 
 @media (max-width:575px) {
@@ -618,7 +633,8 @@ Theme Name: Electric
 .contacts__list-name {
     font-size: 20px;
     line-height: 28px;
-    font-weight: 700
+    font-weight: 700;
+    color: #fff;
 }
 
 @media (max-width:991px) {
@@ -652,7 +668,8 @@ Theme Name: Electric
 
 .contacts__mail {
     font-size: 20px;
-    line-height: 28px
+    line-height: 28px;
+    color: #fff;
 }
 
 @media (max-width:991px) {

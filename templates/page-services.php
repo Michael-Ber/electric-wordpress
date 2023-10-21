@@ -9,7 +9,7 @@
     get_header();
 ?>
 
-<section class="about" id="about">
+<section class="about" id="about" style="background:url(<?php the_post_thumbnail_url();?>) center center/cover no-repeat">
     <div class="container">
         <div class="about__wrapper">
             <h2 class="about__title section-title"><?php the_field('about_title');?></h2>
