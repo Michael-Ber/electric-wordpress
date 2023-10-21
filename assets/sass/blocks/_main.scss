@@ -1,0 +1,124 @@
+@import '../additional/mixins';
+@import '../additional/variables';
+
+.main {
+    position: relative;
+    height: 100vh;
+    padding-top: 65px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 10px;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(#000, .5) ;
+        z-index: 1;
+    }
+    &__wrapper {
+        position: relative;
+        z-index: 100;
+    }
+
+    &__title {
+        color: #ffffff;
+        margin-bottom: 30px;
+    }
+
+    &__subtitle{
+        position: relative;
+        color: #fff;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+        &::before {
+            content: url('./assets/icons/check.svg');
+            position: absolute;
+            top: 2px;
+            right: calc(100% + 10px);
+            width: 20px;
+            height: 20px;
+        }
+        @media(max-width: $width575) {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        line-height: 28px;
+        text-align: center;
+        @media(max-width: $width575) {
+            font-size: 16px;
+            line-height: 24px;
+        };
+        span {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: #fff;
+            margin-left: 20px;
+            @media(max-width: $width575) {
+                width: 12px;
+                height: 12px;
+            };
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 40%;
+                transform: translate(0, -50%);
+                display: block;
+                border: 7px solid transparent;
+                border-left: 7px solid $light-blue;
+                z-index: 1;
+                @media(max-width: $width575) {
+                    border: 4px solid transparent;
+                    border-left: 4px solid $light-blue;
+                };
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 25%;
+                transform: translate(0, -50%);
+                display: block;
+                border: 7px solid transparent;
+                border-left: 7px solid #fff;
+                z-index: 2;
+                @media(max-width: $width575) {
+                    border: 4px solid transparent;
+                    border-left: 4px solid #fff;
+                };
+            }
+        }
+    }
+}

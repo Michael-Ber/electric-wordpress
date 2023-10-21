@@ -1,0 +1,105 @@
+.footer {
+
+    padding: 50px 10px;
+    background-color: #000;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @media(max-width: $width767) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__social {
+        flex: 0 0 30%;
+    }
+
+    &__link {
+        &:nth-child(n):not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__contacts {
+        flex: 0 0 70%;
+        
+        padding: 15px 0 0 0;
+        @media(max-width: $width767) {
+            width: 100%;
+            margin-top: 30px;
+        }
+        
+    }
+}
+.contacts-footer {
+
+    &__map {
+        iframe {
+            width: 100%;
+        }
+    }
+
+    &__addr {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-top: 2px solid #fff;
+        padding-top: 20px;
+        margin-top: 20px;
+        @media(max-width: $width520) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__copyright {
+        color: #fff;
+        margin-top: 50px;
+        font-size: 12px;
+        @media(max-width: $width520) {
+            text-align: center;
+        }
+    }
+}
+.addr-footer {
+
+    &__item {
+        color: #fff;
+        font-size: 18px;
+        @media(max-width: $width575) {
+            padding: 5px 0;
+            font-size: 16px;
+        }
+        @media(max-width: $width520) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 300px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-size: 20px;
+        @media(max-width: $width520) {
+            margin-bottom: 0;
+            font-size: 18px;
+        }
+    }
+
+    &__content {
+        font-size: 18px;
+        @media(max-width: $width520) {
+            font-size: 16px;
+            width: 200px;
+        }
+    }
+
+    &__link {
+        padding: 15px 0;
+    }
+}
